@@ -24,7 +24,7 @@ export default {
   line-height 0.86rem
   display flex
   color #fff
-  background $bgColor
+  background #00bcd4
   .header-left  
     width .64rem
     float left
@@ -46,6 +46,5 @@ export default {
     line-height .64rem
     margin-left .2rem
     border-radius .1rem
-    color #ccc
-    
+    color $darkTextColor
 </style>
