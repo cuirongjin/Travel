@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <div id="nav">
-        去哪啊
-    </div>
     <router-view />
   </div>
 </template>
