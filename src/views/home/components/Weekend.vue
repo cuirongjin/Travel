@@ -4,7 +4,7 @@
         周末去哪
     </div>
     <ul>
-       <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+       <li class="item border-bottom" v-for="item in list" :key="item.id">
           <div class="item-img-wrapper">
             <img :src="item.imgUrl" alt="" class="item-img">
           </div>
@@ -19,40 +19,11 @@
 <script>
 export default {
   nameL:"HomeRecommmend",
+  props:{
+    list:Array
+  },
   data () {
     return{
-      recommendList:[
-      {
-        id:"001",
-        imgUrl:"http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg",
-        title:"故宮",
-        desc:"北京市东城区景山前街4号"
-      },
-      {
-        id:"002",
-        imgUrl:"http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg",
-        title:"故宮",
-        desc:"北京市东城区景山前街4号"
-      },
-      {
-        id:"003",
-        imgUrl:"http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg",
-        title:"故宮",
-        desc:"北京市东城区景山前街4号"
-      },
-      {
-        id:"004",
-        imgUrl:"http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg",
-        title:"故宮",
-        desc:"北京市东城区景山前街4号"
-      },
-      {
-        id:"005",
-        imgUrl:"http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg",
-        title:"故宮",
-        desc:"北京市东城区景山前街4号"
-      }
-    ]
     }
   }
 }
@@ -60,7 +31,6 @@ export default {
 <style lang="stylus" scoped>
 @import "~styles/mixins.styl"
 .recommend-title
-  margin-top .2rem
   line-height .8rem
   background #eee
   text-indent .2rem
@@ -72,7 +42,6 @@ export default {
     width 100%
     height 1.7re
     padding .1rem
-
 .item-title
   line-height .54rem
   font-size .32rem
