@@ -7,10 +7,12 @@
       <span class="iconfont">&#xe632;</span>
       输入城市/景点/旅游
     </div>
-    <div class="header-right">
+    <router-link to="/city"> 
+      <div class="header-right">
       {{this.city}}
       <span class="iconfont arrow-iocn" >&#xe62d;</span>
     </div>
+    </router-link>
   </div>
 </template>
 <script>
@@ -39,6 +41,7 @@ export default {
     float:right
     text-align center
     padding-left .2rem
+    color white
     .arrow-iocn
       font-size .24rem
   .header-input
