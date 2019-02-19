@@ -9,7 +9,12 @@
        v-show="keyWord"
         >
       <ul>
-        <li class="search-item border-bottom" v-for="item in list" :key="item.id">{{item.name}}</li>
+        <li 
+          class="search-item border-bottom" 
+          v-for="item in list" 
+          :key="item.id"
+          @click="handleCityClick(item.name)"
+          >{{item.name}}</li>
         <li  class="search-item border-bottom" v-show="hasList">
           暂无数据
         </li>
@@ -61,6 +66,13 @@ export default {
   },
   mounted () {
     this.scroll=new Bscroll(this.$refs.search);
+  },
+  methods:{
+     handleCityClick(city) {
+      console.log(city)
+      this.$store.commit("changeCity",city)
+      this.$router.push('/')
+    }
   }
 }
 </script>
