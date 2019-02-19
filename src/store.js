@@ -2,16 +2,27 @@ import Vue from "vue";
 import Vuex from "vuex";
 
 Vue.use(Vuex);
-
+ let defaultCity="南京"
+ try{
+  if(localStorage.city){
+    defaultCity=localStorage.city
+  }
+ }catch(e){}
 export default new Vuex.Store({
   state: {
-    city:'南京'
+    city:defaultCity
   },
   mutations: {
     changeCity(state,city){
         state.city=city;
+        try{
+          localStorage.city=city
+        }catch (e) {}      
+    }
+  },
+  getters:{
+    dobleCity(state){
+        return "546"
     }
   }
-    
-  ,
 });
