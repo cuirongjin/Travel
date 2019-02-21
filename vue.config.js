@@ -7,5 +7,6 @@ module.exports={
   chainWebpack: config => {
     config.resolve.alias
       .set("styles",resolve("src/assets/stylus/"))
+      .set("common",resolve("src/common/"))
   }
 }
