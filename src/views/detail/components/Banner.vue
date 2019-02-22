@@ -12,15 +12,19 @@
           </div>
         </div>
     </div>
+    <fade-andimation>
     <common-gallary v-show="showGallary" :imgs="gallaryImgs" @close="handleGallaryClose"></common-gallary>
+     </fade-andimation>
   </div>
 </template>
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fade/Fade.vue'
 export default {
   name:"Banner",
   components:{
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   },
   props:{
     sightName:String,

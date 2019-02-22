@@ -66,7 +66,7 @@ export default {
       this.bannerImg=res.bannerImg
       this.gallaryImgs=res.gallaryImgs
       this.categoryList=res.categoryList
-     
+     8
     }
   },
   components:{
