@@ -1,18 +1,17 @@
 <template>
   <div class="header">
-      <router-link to="/"> 
-        <div class="iconfont header-icon">&#xe624;</div>
-      </router-link>
+    <router-link to="/">
+      <div class="iconfont header-icon">&#xe624;</div>
+    </router-link>
     城市选择
   </div>
 </template>
 <script>
 export default {
-  name:"CityHeader"
-}
+  name: "CityHeader"
+};
 </script>
 <style lang="stylus" scoped>
-
 .header
   overflow hidden
   position relative
@@ -29,5 +28,3 @@ export default {
     left 0
     color #fff
 </style>
-
-

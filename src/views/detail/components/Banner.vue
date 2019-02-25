@@ -1,51 +1,53 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img 
-        :src="bannerImg">
-        <div class="banner-info">
-          <div class="banner-title">
-            {{sightName}}
-          </div>
-          <div class="banner-number">
-               <span class="iconfont arrow-iocn" >&#xe692;</span>13
-          </div>
+      <img :src="bannerImg" />
+      <div class="banner-info">
+        <div class="banner-title">
+          {{ sightName }}
         </div>
+        <div class="banner-number">
+          <span class="iconfont arrow-iocn">&#xe692;</span>13
+        </div>
+      </div>
     </div>
     <fade-andimation>
-    <common-gallary v-show="showGallary" :imgs="gallaryImgs" @close="handleGallaryClose"></common-gallary>
-     </fade-andimation>
+      <common-gallary
+        v-show="showGallary"
+        :imgs="gallaryImgs"
+        @close="handleGallaryClose"
+      ></common-gallary>
+    </fade-andimation>
   </div>
 </template>
 <script>
-import CommonGallary from 'common/gallary/Gallary'
-import FadeAnimation from 'common/fade/Fade.vue'
+import CommonGallary from "common/gallary/Gallary";
+import FadeAnimation from "common/fade/Fade.vue";
 export default {
-  name:"Banner",
-  components:{
+  name: "Banner",
+  components: {
     CommonGallary,
     FadeAnimation
   },
-  props:{
-    sightName:String,
-    bannerImg:String,
-    gallaryImgs:Array
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array
   },
- 
-  data () {
+  data() {
     return {
-      showGallary:false
-    }
+      showGallary: false
+    };
   },
-  methods:{
-    handleBannerClick () {
-      this.showGallary=true
+  methods: {
+    handleBannerClick() {
+      this.showGallary = true;
     },
-    handleGallaryClose () {
-       this.showGallary=false
+    handleGallaryClose() {
+      this.showGallary = false;
     }
   }
-}
+};
 </script>
 <style lang="stylus" scoped>
 .banner
@@ -55,7 +57,6 @@ export default {
   padding-bottom 55%
   .banner-img
     width 100%
-
   .banner-info
     display flex
     position absolute
